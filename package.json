@@ -1,0 +1,98 @@
+{
+  "_args": [
+    [
+      "bacoorjp-pbkdf2@0.0.3",
+      "/Users/user/Desktop/hb_wallet"
+    ]
+  ],
+  "_from": "bacoorjp-pbkdf2@0.0.3",
+  "_id": "bacoorjp-pbkdf2@0.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-dp1ZQAa/BeEfNyPUrsISvuo5EYE=",
+  "_location": "/bacoorjp-pbkdf2",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "bacoorjp-pbkdf2@0.0.3",
+    "name": "bacoorjp-pbkdf2",
+    "escapedName": "bacoorjp-pbkdf2",
+    "rawSpec": "0.0.3",
+    "saveSpec": null,
+    "fetchSpec": "0.0.3"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/bacoorjp-pbkdf2/-/bacoorjp-pbkdf2-0.0.3.tgz",
+  "_spec": "0.0.3",
+  "_where": "/Users/user/Desktop/hb_wallet",
+  "author": {
+    "name": "Daniel Cousens"
+  },
+  "browser": {
+    "./index.js": "./browser.js",
+    "./lib/sync.js": "./lib/sync-browser.js"
+  },
+  "bugs": {
+    "url": "https://github.com/crypto-browserify/pbkdf2/issues"
+  },
+  "dependencies": {
+    "create-hash": "^1.1.2",
+    "create-hmac": "^1.1.4",
+    "ripemd160": "^2.0.1",
+    "safe-buffer": "^5.0.1",
+    "sha.js": "^2.4.8"
+  },
+  "description": "This library provides the functionality of PBKDF2 with the ability to use any supported hashing algorithm returned from crypto.getHashes()",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "browserify": "*",
+    "nyc": "^6.4.0",
+    "standard": "*",
+    "tape": "^4.5.1"
+  },
+  "engines": {
+    "node": ">=0.12"
+  },
+  "files": [
+    "browser.js",
+    "index.js",
+    "lib/"
+  ],
+  "homepage": "https://github.com/crypto-browserify/pbkdf2",
+  "keywords": [
+    "pbkdf2",
+    "kdf",
+    "salt",
+    "hash"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "bacoorjp-pbkdf2",
+  "nyc": {
+    "exclude": [
+      "lib/async.js",
+      "test/bundle.js"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crypto-browserify/pbkdf2.git"
+  },
+  "scripts": {
+    "bench": "node bench/",
+    "bundle-test": "browserify test/index.js > test/bundle.js",
+    "coverage": "nyc --check-coverage --branches 90 --functions 100 tape test/*.js",
+    "lint": "standard",
+    "prepublish": "npm run test",
+    "test": "npm run lint && npm run unit",
+    "unit": "tape test/*.js"
+  },
+  "standard": {
+    "ignore": [
+      "test/bundle.js"
+    ]
+  },
+  "version": "0.0.3"
+}
